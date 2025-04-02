@@ -54,12 +54,11 @@ export const App: React.FC = () => {
     getUser(userId)
       .then(fetchedUser => {
         setUser(fetchedUser);
+        setTodo(selectedTodo);
       })
       .finally(() => {
         setLoading(false);
       });
-
-    setTodo(selectedTodo);
   };
 
   const closeModal = () => {
